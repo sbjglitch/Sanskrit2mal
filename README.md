@@ -1,4 +1,4 @@
-# Sanskrit-Hindi-Machine-Translation
+# Sanskrit-Malayalam-Machine-Translation
 Analysing different techniques of Sanskrit-Hindi Machine Translation
 
 The project report is attached as NLP_Final_Report_Group_2.pdf
