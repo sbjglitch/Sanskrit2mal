@@ -1,29 +1,11 @@
-# 
-#  Copyright (c) 2013-present, Anoop Kunchukuttan
-#  All rights reserved.
-#  
-#  This source code is licensed under the MIT license found in the
-#  LICENSE file in the root directory of this source tree.
-# 
 
-#Program for tokenizing Indian language input 
-#
-# @author Anoop Kunchukuttan 
-#
-"""
-Tokenizer for Indian languages. Currently, simple punctuation-based tokenizers
-are supported (see `trivial_tokenize`). Major Indian language punctuations are
-handled. 
-"""
 import string, re, sys
 
 from indicnlp.common import IndicNlpException
+from inltk.inltk import tokenize 
 
-### tokenizer patterns 
 triv_tokenizer_indic_pat=re.compile(r'(['+string.punctuation+r'\u0964\u0965'+r'])')
-triv_tokenizer_urdu_pat=re.compile(r'(['+string.punctuation+r'\u0609\u060A\u060C\u061E\u066A\u066B\u066C\u066D\u06D4'+r'])')
 
-## date, numbers, section/article numbering
 pat_num_seq=re.compile(r'([0-9]+ [,.:/] )+[0-9]+')
 
 def trivial_tokenize_indic(text): 
@@ -62,40 +44,9 @@ def trivial_tokenize_indic(text):
     
     return s.split(' ')
 
-def trivial_tokenize_urdu(text): 
-    """tokenize Urdu string 
-
-    A trivial tokenizer which just tokenizes on the punctuation boundaries. 
-    This also includes punctuations for the Urdu script.
-    These punctuations characters were identified from the Unicode database 
-    for Arabic script by looking for punctuation symbols.
-
-    Args:
-        text (str): text to tokenize
-
-    Returns:
-        list: list of tokens
-    """
-    tok_str=triv_tokenizer_urdu_pat.sub(r' \1 ',text.replace('\t',' '))
-    return re.sub(r'[ ]+',' ',tok_str).strip(' ').split(' ')
 
 def trivial_tokenize(text,lang='hi'): 
-    """trivial tokenizer for Indian languages using Brahmi for Arabic scripts
 
-    A trivial tokenizer which just tokenizes on the punctuation boundaries. 
-    Major punctuations specific to Indian langauges are handled. 
-    These punctuations characters were identified from the Unicode database. 
-
-    Args:
-        text (str): text to tokenize
-        lang (str): ISO 639-2 language code
-
-    Returns:
-        list: list of tokens
-    """
-    if lang=='ur':
-        return trivial_tokenize_urdu(text)
-    else:
         return trivial_tokenize_indic(text)
 
 if __name__ == '__main__': 
