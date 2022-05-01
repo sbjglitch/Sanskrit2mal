@@ -10,12 +10,12 @@ Bhagavad gita in Sanskrit and Malayalam in .txt file
 
 Group Members
 ------------------
-Flora Johnson ADR18CS017  adr18cs017@cea.ac.in
+**Flora Johnson**  _ADR18CS017_  adr18cs017@cea.ac.in
 
-Rishin Navas ADR18CS032   adr18cs032@cea.ac.in
+**Rishin Navas**  _ADR18CS032_  adr18cs032@cea.ac.in
 
-Sarath Babu John ADR18CS027   adr18cs037@cea.ac.in
+**Sarath Babu John**  _ADR18CS027_   adr18cs037@cea.ac.in
 
-Sona PB LADR18CS049   ladr18cs049@cea.ac.in
+**Sona PB**  _LADR18CS049_   ladr18cs049@cea.ac.in
 
 
