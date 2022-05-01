@@ -4,6 +4,9 @@ A Computer science project for College of Engineerign Adoor, Department of Compu
 A Neural Machine translation system  for translating Sanskrit to Malayalam. This a Supervised Nueral Machine translator.
 
 
+Data Set
+------------------
+Bhagavad gita in Sanskrit and Malayalam in .txt file
 
 Group Members
 ------------------
